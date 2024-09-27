@@ -37,8 +37,8 @@ const AuthForm = ({ isSignup }) => {
     e.preventDefault();
 
     const url = isSignup
-      ? "http://localhost:8000/auth/register"
-      : "http://localhost:8000/auth/login";
+      ? "https://healthfizz-backend.onrender.com/auth/register"
+      : "https://healthfizz-backend.onrender.com/auth/login";
 
     try {
       const response = await axios.post(url, formData);
