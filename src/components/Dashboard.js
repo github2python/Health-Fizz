@@ -53,7 +53,7 @@ const Dashboard = () => {
       try {
         const email = localStorage.getItem("email");
         const response = await axios.get(
-          `http://localhost:8000/disease/risk/${email}`
+          `https://healthfizz-backend.onrender.com/disease/risk/${email}`
         );
         setUserRisk(response.data.riskScores);
         console.log(response.data.riskScores);
@@ -67,7 +67,7 @@ const Dashboard = () => {
           await Promise.all(
             diseaseRisks.map(async ([disease]) => {
               const preventionResponse = await axios.get(
-                `http://localhost:8000/prevention/steps/${disease}`
+                `https://healthfizz-backend.onrender.com/prevention/steps/${disease}`
               );
               steps[disease] = preventionResponse.data;
             })
