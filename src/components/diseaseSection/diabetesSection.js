@@ -241,7 +241,7 @@ const DiseaseSection = () => {
     const email = localStorage.getItem("email");
     try {
       const response = await axios.post(
-        `http://localhost:8000/predict/diabetes/${email}`,
+        `https://healthfizz-backend.onrender.com/predict/diabetes/${email}`,
         {
           features,
         }
